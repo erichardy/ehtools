@@ -1,0 +1,117 @@
+
+
+function src {
+    XREP=`pwd`
+    REP=`basename $XREP`
+    # NB est le nombre d'elements dans le nom du repertoire du module
+    # c'est 1, 2 ou 3
+    NB=`echo $REP | awk '{print NF}' FS='.'`
+    if [ $NB = "1" ]
+    then
+        REPS=`echo $REP | awk '{print $1}' FS='.'`
+    fi
+    if [ $NB = "2" ]
+    then
+        R1=`echo $REP | awk '{print $1}' FS='.'`
+        R2=`echo $REP | awk '{print $2}' FS='.'`
+        REPS="$R1/$R2"
+    fi
+    if [ $NB = "3" ]
+    then
+        R1=`echo $REP | awk '{print $1}' FS='.'`
+        R2=`echo $REP | awk '{print $2}' FS='.'`
+        R3=`echo $REP | awk '{print $3}' FS='.'`
+        REPS="$R1/$R2/$R3"
+    fi
+    if [ -d $REPS ]
+    then
+        cd $REPS
+    else
+        cd src/$REPS
+    fi
+}
+
+function greppy {
+  grep -Rin $1 --include='*.py' *
+}
+function grepz {
+  grep -Rin $1 --include='*.zcml' *
+}
+function greppt {
+  grep -Rin $1 --include='*.pt' *
+}
+function grepxml {
+  grep -Rin $1 --include='*.xml' *
+}
+function grepjs {
+  grep -Rin $1 --include='*.js' *
+}
+function grepcss {
+  grep -Rin $1 --include='*.css' --include='*.css.dtml' *
+}
+function grepless {
+  grep -Rin $1 --include='*.less' *
+}
+function grepR {
+  grep -Rin $1 *
+}
+
+function grepRmin {
+  grep -Rin $1 --exclude='*.min.js' --exclude='*.min.css' --exclude='*-compiled.css' --exclude='*-compiled.js' --exclude='*.map' *
+}
+
+function grepRf {
+  grep -Rin $1 --include='setup.py' *
+}
+
+function grepreq {
+  (cd $HOME/.buildout/eggs ; grep -Rin $1 --include='requires.txt' *)
+}
+
+function greprobot {
+  (cd $HOME/.buildout/eggs ; grep -Rin $1 --include='*.robot' *)
+}
+function greptests {
+  (cd $HOME/.buildout/eggs ; grep -Rin $1 --include='*/tests/*' *)
+}
+
+function dev {
+  $HOME/ehtools/dev.sh
+  REP=`cat $HOME/ehtools/devREP`
+  clear
+  cd $REP
+}
+
+alias cdev='vi $HOME/ehtools/choices.txt'
+alias ddev='cd  $HOME/Dev/'
+alias bui='cd /opt/BUILDOUT/iuem.buildout'
+alias ungit='$HOME/Dev/node/node_modules/ungit/bin/ungit'
+alias plone='cd /opt/Plone'
+alias myaliases=". ~/.alias"
+
+alias la="ls -la"
+alias lal="ls -la | less"
+alias l="ls -l"
+alias ll="ls -l | less"
+alias ltr='ls -ltru'
+
+alias eggs="cd $HOME/.buildout/eggs"
+alias ecdoc-ueb='ssh $ECDOC'
+alias e1="ssh $ECDOC '/opt/Plone/tebl506-zeo/e1'"
+alias e2="ssh $ECDOC '/opt/Plone/tebl506-zeo/e2'"
+alias e3="ssh $ECDOC '/opt/Plone/tebl506-zeo/e3'"
+alias e4="ssh $ECDOC '/opt/Plone/tebl506-zeo/e4'"
+
+function ftaili-tebl {
+    ssh $ECDOC '(cd /opt/Plone/tebl506-zeo ; ./ftaili.sh)'
+}
+
+function ftailiz-tebl {
+    ssh $ECDOC '(cd /opt/Plone/tebl506-zeo ; ./ftailiz.sh)'
+}
+
+alias gitp="git push"
+alias gitc="git commit -am "
+
+# vim:set et sts=4 ts=4 tw=80 syntax=sh:
+
