@@ -82,10 +82,10 @@ function dev {
   cd $REP
 }
 
-alias cdev='vi $HOME/ehtools/choices.txt'
-alias ddev='cd  $HOME/Dev/'
+alias cdev="vi $DEVREPFILE"
+alias ddev="cd  $DEV"
 alias bui='cd /opt/BUILDOUT/iuem.buildout'
-alias ungit='$HOME/Dev/node/node_modules/ungit/bin/ungit'
+alias ungit="$HOME/Dev/node/node_modules/ungit/bin/ungit"
 alias plone='cd /opt/Plone'
 alias myaliases=". $HOME/ehtools/bin/dev_aliases"
 alias ehtools="cd $HOME/ehtools"

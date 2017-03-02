@@ -2,8 +2,8 @@
 
 touch /tmp/dialogtmp && FICHTMP=/tmp/dialogtmp
 trap "rm -f $FICHTMP" 0 1 2 3 5 15
-CHOICES="$HOME/ehtools/etc/choices.txt"
-DEV="$HOME/Dev"
+CHOICES="$DEVREPFILE"
+DEV="$DEV"
 
 IFS="
 "
