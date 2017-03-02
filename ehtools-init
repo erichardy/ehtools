@@ -1,0 +1,14 @@
+
+# ligne, commentaire retiré, à ajouter au .profile :
+# . $HOME/ehtools/ehtools-init
+
+# variables qui doivent avoir, prealablement recu une valeur
+# par ex. dans .profile appelant
+# ECDOC
+
+export PATH="$HOME/ehtools/bin:$PATH"
+
+. $HOME/ehtools/bin/dev_aliases
+
+
+
