@@ -8,6 +8,7 @@
 # ECDOC : nom du host qui héberge ``teb`` et ``tebl``
 # 
 # DEV : chemin absolu du répertoire qui contient les répertoires de dev
+#       export DEV="$HOME/dev"
 #
 # DEVREPFILE : chemin absolu du fichier qui contient la liste des répertoires
 #              de dev. Spécifique à chaque personne/environnement
