@@ -76,8 +76,8 @@ function greptests {
 }
 
 function dev {
-  $HOME/ehtools/dev.sh
-  REP=`cat $HOME/ehtools/devREP`
+  $HOME/ehtools/bin/dev.sh
+  REP=`cat $HOME/ehtools/tmp/devREP`
   clear
   cd $REP
 }

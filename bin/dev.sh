@@ -2,7 +2,7 @@
 
 touch /tmp/dialogtmp && FICHTMP=/tmp/dialogtmp
 trap "rm -f $FICHTMP" 0 1 2 3 5 15
-CHOICES="$HOME/ehtools/choices.txt"
+CHOICES="$HOME/ehtools/etc/choices.txt"
 DEV="$HOME/Dev"
 
 IFS="
@@ -28,7 +28,7 @@ NBREP=`cat $FICHTMP`
 REP=`head -$NBREP $CHOICES | tail -1`
 
 case $? in
-    0)  echo $DEV/$REP > $HOME/ehtools/devREP;;
+    0)  echo $DEV/$REP > $HOME/ehtools/tmp/devREP;;
     1)  echo "Annulé";;
     255)    echo "Appuyé sur Echap. ";;
 esac
