@@ -1,3 +1,11 @@
+iuem20.mission
+iuem20.project
+iuem20.portrait
+iuem20.contenttypes
+plonetheme.iuem20
+iuem20.behaviors
+iuem20.portfolio
+iuem20.studysite
 plonetheme.dellec
 ubl.tebl
 iuem.customviews

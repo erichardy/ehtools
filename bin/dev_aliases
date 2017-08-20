@@ -90,6 +90,9 @@ alias plone='cd /opt/Plone'
 alias myaliases=". $HOME/ehtools/bin/dev_aliases"
 alias ehtools="cd $HOME/ehtools"
 
+alias bi="bin/buildout && bin/instance fg"
+alias is="bin/instance fg"
+
 alias la="ls -la"
 alias lal="ls -la | less"
 alias l="ls -l"
