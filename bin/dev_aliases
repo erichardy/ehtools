@@ -130,5 +130,9 @@ function e4 {
 alias gitp="git push"
 alias gitc="git commit -am "
 
+alias cde="cd $HOME/Electronique/"
+alias cdee="cd $HOME/Electronique/e-simulations/"
+
+
 # vim:set et sts=4 ts=4 tw=80 syntax=sh:
 

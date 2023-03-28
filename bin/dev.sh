@@ -1,6 +1,6 @@
 #!/bin/sh
 
-touch /tmp/dialogtmp && FICHTMP=/tmp/dialogtmp
+touch /tmp/dialogtmp && FICHTMP="/tmp/dialogtmp"
 trap "rm -f $FICHTMP" 0 1 2 3 5 15
 CHOICES="$DEVREPFILE"
 DEV="$DEV"
@@ -26,11 +26,11 @@ $DIALOG --clear --title "Choisir..." --menu "Choisir : " 30 40 14 $LL 2> $FICHTM
 
 NBREP=`cat $FICHTMP`
 REP=`head -$NBREP $CHOICES | tail -1`
+# echo $FICHTMP
 
 case $? in
     0)  echo $DEV/$REP > $HOME/ehtools/tmp/devREP;;
     1)  echo "Annulé";;
     255)    echo "Appuyé sur Echap. ";;
 esac
-
 
