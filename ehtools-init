@@ -4,5 +4,10 @@ export CDPATH=".:$HOME:$HOME/ehtools:$HOME/Dev"
 
 . $HOME/ehtools/bin/dev_aliases
 
+if [ -f $HOME/ehtools/aliases.local ]
+then
+	. $HOME/ehtools/aliases.local
+fi
+
 
 
