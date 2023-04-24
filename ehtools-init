@@ -1,5 +1,5 @@
 
-export PATH="$HOME/ehtools/bin:$PATH"
+export PATH="$HOME/bin:$HOME/ehtools/bin:$PATH"
 export CDPATH=".:$HOME:$HOME/ehtools:$HOME/Dev"
 
 . $HOME/ehtools/bin/dev_aliases
