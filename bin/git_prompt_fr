@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # from https://github.com/matthewmccullough/dotfiles/blob/master/bash_gitprompt
+# pour avoir les messages en anglais et faire la correspondance avec les
+# patterns anglais, il faut annuler la locale fr en faisant, par exemple :
+# LANG=""
+# ce qui permet d'avoir, juste dans ce terminal, les messages en anglais.
 
 ########################################################################
 # Matthew's Git Bash Prompt
@@ -21,7 +25,10 @@ function parse_git_branch {
   # echo $git_status
   # branch_pattern="^On branch ([^${IFS}]*)"
   branch_pattern="^Sur la branche ([^${IFS}]*)"
-  remote_pattern="Your branch is (.*) of"
+  # remote_pattern="Your branch is (.*) of"
+  remote_pattern="Votre branche est (.*) sur"
+  # il faut encore mettre a jour la variable diverge_pattern=...
+  # avec la version francaise des messages.
   diverge_pattern="Your branch and (.*) have diverged"
 
   # if [[ ! ${git_status}} =~ "working directory clean" ]]; then
@@ -30,7 +37,7 @@ function parse_git_branch {
   fi
   # add an else if or two here if you want to get more specific
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
-    if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
+    if [[ ${BASH_REMATCH[1]} == "en avance" ]]; then
       remote="${YELLOW}↑"
     else
       remote="${YELLOW}↓"

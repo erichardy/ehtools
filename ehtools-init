@@ -9,6 +9,11 @@ then
 	. $HOME/ehtools/aliases.local
 fi
 
+if [ -f $HOME/ehtools/bin/git_prompt_fr ]
+then
+	source $HOME/ehtools/bin/git_prompt_fr
+fi
+
 
 #if [ -f $HOME/bin/git_prompt ]
 #then
