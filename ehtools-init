@@ -10,4 +10,13 @@ then
 fi
 
 
-
+#if [ -f $HOME/bin/git_prompt ]
+#then
+#	. $HOME/bin/git_prompt
+#fi
+#
+#if [ -f $HOME/bin/git-completion.bash ]
+#then
+#	. $HOME/bin/git-completion.bash
+#fi
+#
