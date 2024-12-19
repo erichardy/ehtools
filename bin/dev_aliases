@@ -82,10 +82,11 @@ function dev {
   cd $REP
 }
 
+DEV="$HOME/Dev"
+
 alias cdev="vi $DEVREPFILE"
-alias ddev="cd  $DEV"
+alias ddev="cd $DEV"
 alias bui='cd /opt/BUILDOUT/iuem.buildout'
-alias ungit="$HOME/Dev/node/node_modules/ungit/bin/ungit"
 alias plone='cd /opt/Plone'
 alias myaliases=". $HOME/ehtools/bin/dev_aliases"
 alias ehtools="cd $HOME/ehtools"
@@ -100,11 +101,6 @@ alias ll="ls -l | less"
 alias ltr='ls -ltru'
 
 alias eggs="cd $HOME/.buildout/eggs"
-alias ecdoc-ueb='ssh $ECDOC'
-alias e1="ssh $ECDOC '/opt/Plone/tebl506-zeo/e1'"
-alias e2="ssh $ECDOC '/opt/Plone/tebl506-zeo/e2'"
-alias e3="ssh $ECDOC '/opt/Plone/tebl506-zeo/e3'"
-alias e4="ssh $ECDOC '/opt/Plone/tebl506-zeo/e4'"
 
 function ftaili-tebl {
     ssh $ECDOC '(cd /opt/Plone/tebl506-zeo ; ./ftaili.sh)'
@@ -114,26 +110,16 @@ function ftailiz-tebl {
     ssh $ECDOC '(cd /opt/Plone/tebl506-zeo ; ./ftailiz.sh)'
 }
 
-function e1 {
-    ssh $ECDOC '/opt/Plone/tebl506-zeo/e1'
-}
-function e2 {
-    ssh $ECDOC '/opt/Plone/tebl506-zeo/e2'
-}
-function e3 {
-    ssh $ECDOC '/opt/Plone/tebl506-zeo/e3'
-}
 function e4 {
     ssh $ECDOC '/opt/Plone/tebl506-zeo/e4'
 }
 
 alias gitp="git push"
+alias gitpl="git pull"
 alias gitc="git commit -am "
 
 alias cde="cd $HOME/Dev/_Electronique/"
 alias cdee="cd $HOME/Dev/_Electronique/e-simulations/"
-
-alias arduino="$HOME/bin/arduino-ide_2.2.1_Linux_64bit/arduino-ide"
 
 # vim:set et sts=4 ts=4 tw=80 syntax=sh:
 
