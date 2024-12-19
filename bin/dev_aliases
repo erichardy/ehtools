@@ -75,17 +75,11 @@ function greptests {
   (cd $HOME/.buildout/eggs ; grep -Rin $1 --include='*/tests/*' *)
 }
 
-function dev {
-  $HOME/ehtools/bin/dev.sh
-  REP=`cat $HOME/ehtools/tmp/devREP`
-  clear
-  cd $REP
-}
-
 DEV="$HOME/Dev"
 
 alias cdev="vi $DEVREPFILE"
 alias ddev="cd $DEV"
+alias dev="cd $DEV"
 alias bui='cd /opt/BUILDOUT/iuem.buildout'
 alias plone='cd /opt/Plone'
 alias myaliases=". $HOME/ehtools/bin/dev_aliases"
