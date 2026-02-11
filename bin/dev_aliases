@@ -114,6 +114,7 @@ alias gitc="git commit -am "
 
 alias cde="cd $HOME/Dev/_Electronique/"
 alias cdee="cd $HOME/Dev/_Electronique/e-simulations/"
+alias cdea="cd $HOME/Dev/_Electronique/Projets/agm"
 
 # vim:set et sts=4 ts=4 tw=80 syntax=sh:
 
